@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>G A M E S</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');    
+.main img{
+    height: 100vh;
+    width: 100%;    
+}
+.second{
+    height: 100vh;
+    background-color: #000;
+}
+.flbox{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding-top: 40px;
+    padding: 0 20px;
+}
+.ims{
+    background-color: purple;
+    height: 250px;
+    cursor: pointer;
+}
+.ims1{
+    background-image: url('https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/4xJ8XB3bi888QTLZYdl7Oi0s.png?w=440&thumb=false');
+    background-size: cover;
+    filter: grayscale(50%);
+}
+.ims2{
+    background-image: url('https://image.api.playstation.com/vulcan/ap/rnd/202404/2409/3c1a52a8c2497b76cbd89813c9f8f0abe5d224a23fbc29ad.png?w=440&thumb=false');
+    background-size: cover;
+}
+.ims3{
+    background-image: url('https://image.api.playstation.com/vulcan/ap/rnd/202405/2921/4b45cf4b319a65e05f6e4f87a22c7b91d2e7e8aeb247b61f.png?w=440&thumb=false');
+    background-size: cover;
+}
+.ims4{
+    background-image: url('https://image.api.playstation.com/vulcan/ap/rnd/202308/0214/b6aab4f9a6cf0940f15ecc4cdbe0de678e7d69eff632006d.png?w=440&thumb=false');
+    background-size: cover;
+}
+.fbo{
+    background-color: black;
+    width: 100%;    
+    color: #fff;
+    background-color: #111717;
+}
+.fbo h6{
+    font-size: 14px;
+    letter-spacing: .5px;
+    color: #999494;
+    margin-top: 10px;
+}
+.fbo h5{
+    margin-top: 10px;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+}
+.fbo p{
+    font-size: 14px;
+    color: #787272;
+    font-family: "Raleway", sans-serif;
+}
+
+#overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+            z-index: 9999; /* Ensure the overlay is on top */
+            justify-content: center;
+            align-items: center;
+        }
+
+        #videoContainer {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        #overviewVideo {
+            width: 100%;
+            height: auto;
+        }
+        h4{
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: .4px;
+            padding-bottom: 10px;
+            color: rgb(141, 2, 2);
+            cursor: pointer;
+            /* background-color: rgb(74, 3, 3); */
+        }
+</style>
+</head>
+<body>
+    <!-- <div class="d-flex">
+        <div><img src="logo.png" alt=""></div>
+        <div>
+            <ol>
+                <li>home</li>
+                <li>category</li>
+                <li>series</li>
+                <li>movies</li>
+                <li>genre</li>
+                <li>trailer</li>
+                <li>content</li>
+            </ol>
+        </div>
+        <div><form action="/action_page.php">
+            <input type="search" id="gsearch" name="gsearch">
+          </form></div>
+    </div> -->
+
+    <div class="main">
+        <img src="game.png" alt="">
+    </div>
+
+    <div class="second pt-5">
+        <h3 style="padding: 20px; color: #FFF; font-weight: 600;">Trending Games</h3>
+        <div class="flbox">
+            <div class="fbo">
+                <div class="ims ims1">
+                </div>
+                <div class="px-2">
+                <h6>12 July 23</h6>
+                <h5>GOD OF WAR</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit dignissimost.....</p>
+                <h4  id="playVideoLink">play video</h4>
+                
+                <div id="overlay">
+                    <div id="videoContainer">
+                        <video id="overviewVideo" controls>
+                            <source src="https://d390juct8uall1.cloudfront.net/God%20of%20War%20Ragnarok%20Official%20Story%20Trailer%20(4K)%20_%20State%20of%20Play%202022.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+            <div class="fbo">
+                <div class="ims ims2"></div>
+                <div class="px-2">
+                <h6>23 May 23</h6>
+                <h5>UNDISPUTED</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit dignissimost.....</p>
+                <h4  id="playVideoLink">play video</h4>
+                <div id="overlay">
+                    <div id="videoContainer">
+                        <video id="overviewVideo" controls>
+                            <source src="God of War Ragnarok Official Story Trailer (4K) _ State of Play 2022.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="fbo">
+                <div class="ims ims3"></div>
+                <div class="px-2">
+                <h6>13 November 23</h6>
+                <h5>CALL OF DUTY</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit dignissimost.....</p>
+                <h4  id="playVideoLink">play video</h4>
+                <div id="overlay">
+                    <div id="videoContainer">
+                        <video id="overviewVideo" controls>
+                            <source src="God of War Ragnarok Official Story Trailer (4K) _ State of Play 2022.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="fbo">
+                <div class="ims ims4"></div>
+                <div class="px-2">
+                <h6>09 August 23</h6>
+                <h5>ENOTRIA</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit dignissimost.....</p>
+                <h4  id="playVideoLink">play video</h4>
+                <div id="overlay">
+                    <div id="videoContainer">
+                        <video id="overviewVideo" controls>
+                            <source src="God of War Ragnarok Official Story Trailer (4K) _ State of Play 2022.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('playVideoLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            var overlay = document.getElementById('overlay');
+            var video = document.getElementById('overviewVideo');
+
+            overlay.style.display = 'flex';
+            video.play();
+
+            // Close the overlay when the video ends
+            video.addEventListener('ended', function() {
+                overlay.style.display = 'none';
+            });
+
+            // Close the overlay when clicking outside the video
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) {
+                    overlay.style.display = 'none';
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
